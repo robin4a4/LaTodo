@@ -38,9 +38,10 @@ class App extends Component {
 
         // on récupère le max id de la liste pour éviter des problèmes lors de la suppression puis de l'ajout d'un item. 
         var maxid = 0;
-        this.state.todos.map(function(obj){     
-            if (obj.id > maxid) maxid = obj.id;    
+        this.state.todos.forEach(obj => {
+            if (obj.id > maxid) maxid = obj.id;
         });
+     
             
         // on créé un nouvel object item
         var item = {
@@ -106,7 +107,7 @@ class App extends Component {
         return (
         <div className="App">
             <div className="wrapper">
-                <img className="logo" src="./logo.png"/>
+                <img className="logo" src="./logo.png" alt="logo todo"/>
                 <h1>Entrer une tache</h1>
                 <TodoForm handleSubmit={(value)=>this.handleSubmit(value)}/>
                 {list}

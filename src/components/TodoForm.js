@@ -59,7 +59,7 @@ class TodoForm extends Component {
 
         // on regarde si on reclic sur un tag ou si on clic sur un nouveau
         var currentTag = this.state.tagSelection
-        if(currentTag==tag){
+        if(currentTag===tag){
              // on défocus le tag
             this.setState({
                 tagSelection: null,
