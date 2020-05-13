@@ -1,2 +1,2 @@
 # LaTodo
-Todo list in react js
+Todo list en react.js 
